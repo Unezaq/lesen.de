@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from pruefvorbnes.onrender.com/index2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Sep 2025 10:45:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <title>Prüfung B2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      padding: 40px;
+      margin: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    .header-buttons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 12px;
+      /* --- THIS IS THE FIX --- */
+      /* Add a z-index to make sure the buttons are on top of other content. */
+      z-index: 10;
+    }
+
+    .nav-button {
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-button:hover {
+      transform: scale(1.05);
+    }
+
+    .home-button {
+      background-color: #007BFF;
+    }
+
+    .home-button:hover {
+      background-color: #0056b3;
+    }
+    
+    .logout-button {
+      background-color: #d9534f;
+    }
+
+    .logout-button:hover {
+      background-color: #c9302c;
+    }
+
+    .container {
+      background: rgb(254, 255, 225);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      padding: 30px 25px;
+      margin-bottom: 40px;
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+      border-top: 6px solid #007BFF;
+    }
+
+    .container:nth-child(2n) {
+      border-top-color: #cc0000;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 24px;
+      color: #444;
+    }
+
+    .quiz-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    a.button {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #007BFF;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    a.button:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+  </style>
+</head>
+<body>
+
+<div class="header-buttons">
+  <a href="index.html" class="nav-button home-button">Homepage</a>
+  <a href="index.html" class="nav-button logout-button">Abmelden</a>
+</div>
+
+
+  <div class="container">
+    <h1>Lesen Teil 1</h1>
+    <div class="quiz-buttons">
+      <a href="index.html" class="button">Umwelt</a>
+      <a href="index.html" class="button">Impfung</a>
+      <a href="index.html" class="button">Kinderhandy</a>
+      <a href="index.html" class="button">Drogen</a>
+      <a href="index.html" class="button">Tanzkurs</a>
+      <a href="index.html" class="button">Limonade</a>
+      <a href="index.html" class="button">Grundschule</a>
+      <a href="index.html" class="button">Insekten</a>
+      <a href="index.html" class="button">Österreich</a>
+      <a href="index.html" class="button">Jugend forscht</a>
+      <a href="index.html" class="button">Sport ist Gesund</a>
+      <a href="index.html" class="button">Inseln</a>
+      <a href="index.html" class="button">In den Alpen</a>
+      <a href="index.html" class="button">In den Alpen 2</a>
+      <a href="index.html" class="button">Kartoffel</a>
+      <a href="index.html" class="button">Bilder</a>
+      <a href="index.html" class="button">Licht</a>
+      <a href="index.html" class="button">Spielen</a>
+      <a href="index.html" class="button">Programmieren</a>
+      <a href="index.html" class="button">Trampoline</a>
+      <a href="index.html" class="button">Benzin</a>
+      <a href="index.html" class="button">Kaffee</a>
+      <a href="index.html" class="button">Bonbons</a>
+      <a href="index.html" class="button">Geld</a>
+      <a href="index.html" class="button">Auf dem Weg</a>
+      <a href="index.html" class="button">Schlafzug</a>
+      <a href="index.html" class="button">Keine Zeit</a>
+      <a href="index.html" class="button">Licht (NEUE)</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Lesen Teil 2</h1>
+    <div class="quiz-buttons">
+      <a href="index.html" class="button">Puppenmacher</a>
+      <a href="index.html" class="button">Österreich</a>
+      <a href="index.html" class="button">Parkuhren</a>
+      <a href="index.html" class="button">Traumfrau</a>
+      <a href="index.html" class="button">Kaufentscheidungen</a>
+      <a href="index.html" class="button">Millionäre</a>
+      <a href="index.html" class="button">Gehirn</a>
+      <a href="index.html" class="button">Verpackungen</a>
+      <a href="index.html" class="button">Kreditkarten</a>
+      <a href="index.html" class="button">Krista die Kühe</a>
+      <a href="index.html" class="button">Ernährung</a>
+      <a href="index.html" class="button">Kaffee</a>
+      <a href="index.html" class="button">Kaffee 2</a>
+      <a href="index.html" class="button">Großraumbüros</a>
+      <a href="index.html" class="button">Familie</a>
+      <a href="index.html" class="button">Babys</a>
+      <a href="index.html" class="button">Karneval von Unna</a>
+      <a href="index.html" class="button">Mehrsprachige</a>
+      <a href="index.html" class="button">Gesundes Essen</a>
+      <a href="index.html" class="button">Dienstmädchen</a>
+      <a href="index.html" class="button">Reitergruppe</a>
+      <a href="index.html" class="button">Brigitte Vollmer</a>
+      <a href="index.html" class="button">Nachtzug</a>
+      <a href="index.html" class="button">Die ganze Welt</a>
+      <a href="index.html" class="button">Kellner</a>
+      <a href="index.html" class="button">Weniger Euro</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Lesen Teil 3</h1>
+    <div class="quiz-buttons">
+      <a href="index.html" class="button">Fernsehprogramm</a>
+      <a href="index.html" class="button">Sport ist Gesund</a>
+      <a href="index.html" class="button">Kellner</a>
+      <a href="index.html" class="button">Schwägerin</a>
+      <a href="index.html" class="button">Dokumentarfilm</a>
+      <a href="index.html" class="button">Wein und Insekten</a>
+      <a href="index.html" class="button">Grundschule</a>
+      <a href="index.html" class="button">Kein Zeit</a>
+      <a href="index.html" class="button">Kein Zeit 2</a>
+      <a href="index.html" class="button">Sport</a>
+      <a href="index.html" class="button">Gärten</a>
+      <a href="index.html" class="button">Apotheker</a>
+      <a href="index.html" class="button">Urlaub</a>
+      <a href="index.html" class="button">Anwalt</a>
+      <a href="index.html" class="button">Der Hund</a>
+      <a href="index.html" class="button">Musik</a>
+      <a href="index.html" class="button">Haushalt</a>
+      <a href="index.html" class="button">Musikinstrumente</a>
+      <a href="index.html" class="button">Schiffsreise</a>
+      <a href="index.html" class="button">Ausflug</a>
+      <a href="index.html" class="button">Schwägerin Gesund</a>
+      <a href="index.html" class="button">Übersetzerin</a>
+      <a href="index.html" class="button">Tierdokumentationen</a>
+      <a href="index.html" class="button">Schlafzug</a>
+      <a href="index.html" class="button">Bonbons</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Sprachbausteine Teil 1</h1>
+    <div class="quiz-buttons">
+      <a href="index.html" class="button">Herr Martini</a>
+      <a href="index.html" class="button">Judith oder Lina</a>
+      <a href="index.html" class="button">Igor</a>
+      <a href="index.html" class="button">Maria</a>
+      <a href="index.html" class="button">Ida</a>
+      <a href="index.html" class="button">Andrea</a>
+      <a href="index.html" class="button">Andrea 2</a>
+      <a href="index.html" class="button">Autorinnen und Autoren</a>
+      <a href="index.html" class="button">Geissler oder Dippold</a>
+      <a href="index.html" class="button">Herr Dr. Dobromil</a>
+      <a href="index.html" class="button">Frau Szabo</a>
+      <a href="index.html" class="button">Corinna</a>
+      <a href="index.html" class="button">Justus oder Juhannas</a>
+      <a href="index.html" class="button">Justus oder Juhannas 2</a>
+      <a href="index.html" class="button">Ferdinand, Phillip, Christopher</a>
+      <a href="index.html" class="button">Liebe Paola</a>
+      <a href="index.html" class="button">Liebe Julian</a>
+      <a href="index.html" class="button">Liebe Lara</a>
+      <a href="index.html" class="button">Lieber David</a>
+      <a href="index.html" class="button">Liebe Maria, Lieber Timur</a>
+      <a href="index.html" class="button">Liebe Vanessa</a>
+      <a href="index.html" class="button">Frau Goronsksa</a>
+      <a href="index.html" class="button">Liebe Karin</a>
+      <a href="index.html" class="button">Liebe Jutta</a>
+      <a href="index.html" class="button">Liebe Meike</a>
+      <a href="index.html" class="button">Liebe Leon</a>
+      <a href="index.html" class="button">Liebe Clara</a>
+      <a href="index.html" class="button">Lieber Thomas</a>
+      <a href="index.html" class="button">Dr. Moosberger</a>
+      <a href="index.html" class="button">Lina & Florian</a>
+      <a href="index.html" class="button">Liebe Agnieszka</a>
+      <a href="index.html" class="button">Jens</a>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h1>Sprachbausteine Teil 2</h1>
+    <div class="quiz-buttons">
+      <a href="index.html" class="button">Theater für Kinder und Jugendliche</a>
+      <a href="index.html" class="button">Im Restaurant</a>
+      <a href="index.html" class="button">Das Fahrrad: ernsthafte Konkurrenz fürs Auto?</a>
+      <a href="index.html" class="button">Haustieren</a>
+      <a href="index.html" class="button">Liebesgrüße aus der Kühltruhe</a>
+      <a href="index.html" class="button">Braunbären</a>
+      <a href="index.html" class="button">Ausbildung</a>
+      <a href="index.html" class="button">Skipiste</a>
+      <a href="index.html" class="button">Jugend diskutiert</a>
+      <a href="index.html" class="button">Manipulierte Bilder</a>
+      <a href="index.html" class="button">Haustieren</a>
+      <a href="index.html" class="button">Schwarzarbeit</a>
+      <a href="index.html" class="button">Handschrift</a>
+      <a href="index.html" class="button">Schulweg</a>
+      <a href="index.html" class="button">Höflichkeit</a>
+      <a href="index.html" class="button">Obst und Gemüse</a>
+      <a href="index.html" class="button">TV-Bilder</a>
+      <a href="index.html" class="button">Freund des Menschen</a>
+      <a href="index.html" class="button">BIO</a>
+      <a href="index.html" class="button">Erfolg</a>
+      <a href="index.html" class="button">Deutschland</a>
+      <a href="index.html" class="button">Joggen</a>
+      <a href="index.html" class="button">Maßgeschneidert</a>
+      <a href="index.html" class="button">Der Hund</a>
+      <a href="index.html" class="button">Online—Sprachkurse</a>
+      <a href="index.html" class="button">Fische</a>
+      <a href="index.html" class="button">Man(n) kocht selbst</a>
+      <a href="index.html" class="button">Schönschrift</a>
+      <a href="index.html" class="button">Kaffee und Kuchen</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Hören</h1>
+    <div class="quiz-buttons">
+      <a href="index.html" class="button">Teil 1</a>
+      <a href="index.html" class="button">Teil 2</a>
+      <a href="index.html" class="button">Teil 3</a>
+    </div>
+  </div>
+
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "index.html");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+</body>
+
+<!-- Mirrored from pruefvorbnes.onrender.com/index2 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 28 Sep 2025 10:46:17 GMT -->
+</html>
+
+

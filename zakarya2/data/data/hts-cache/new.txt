@@ -1,0 +1,4 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+11:55:46	189/189	---MC-	302	error ('Found')	text/html	date:Sun,%2028%20Sep%202025%2010:55:46%20GMT	https://pruefvorbnes.onrender.com/quiz/11	C:/My%20Web%20Sites/zakarya2/data/data/pruefvorbnes.onrender.com/quiz/11.0.delayed	(from )
+11:55:46	3586/3586	---MCZ	200	added ('OK')	text/html	date:Sun,%2028%20Sep%202025%2010:55:46%20GMT	https://pruefvorbnes.onrender.com/	C:/My%20Web%20Sites/zakarya2/data/data/pruefvorbnes.onrender.com/index.html	(from )
+11:55:47	179/179	---MCZ	404	error ('Not%20Found')	text/html	date:Sun,%2028%20Sep%202025%2010:55:47%20GMT	https://pruefvorbnes.onrender.com/robots.txt		(from )
