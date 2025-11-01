@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prüfung B2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      padding: 40px;
+      margin: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    .header-buttons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 12px;
+      /* --- THIS IS THE FIX --- */
+      /* Add a z-index to make sure the buttons are on top of other content. */
+      z-index: 10;
+    }
+
+    .nav-button {
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-button:hover {
+      transform: scale(1.05);
+    }
+
+    .home-button {
+      background-color: #007BFF;
+    }
+
+    .home-button:hover {
+      background-color: #0056b3;
+    }
+    
+    .logout-button {
+      background-color: #d9534f;
+    }
+
+    .logout-button:hover {
+      background-color: #c9302c;
+    }
+
+    .container {
+      background: rgb(254, 255, 225);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      padding: 30px 25px;
+      margin-bottom: 40px;
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+      border-top: 6px solid #007BFF;
+    }
+
+    .container:nth-child(2n) {
+      border-top-color: #cc0000;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 24px;
+      color: #444;
+    }
+
+    .quiz-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    a.button {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #007BFF;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    a.button:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+  </style>
+</head>
+<body>
+
+<div class="header-buttons">
+  <a href="/home" class="nav-button home-button">Homepage</a>
+  <a href="/logout" class="nav-button logout-button">Abmelden</a>
+</div>
+
+
+  <div class="container">
+    <h1>Lesen Teil 1</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/11" class="button">Umwelt</a>
+      <a href="/quiz/12" class="button">Impfung</a>
+      <a href="/quiz/16" class="button">Kinderhandy</a>
+      <a href="/quiz/17" class="button">Drogen</a>
+      <a href="/quiz/18" class="button">Tanzkurs</a>
+      <a href="/quiz/25" class="button">Limonade</a>
+      <a href="/quiz/26" class="button">Grundschule</a>
+      <a href="/quiz/27" class="button">Insekten</a>
+      <a href="/quiz/28" class="button">Österreich</a>
+      <a href="/quiz/39" class="button">Jugend forscht</a>
+      <a href="/quiz/40" class="button">Sport ist Gesund</a>
+      <a href="/quiz/41" class="button">Inseln</a>
+      <a href="/quiz/42" class="button">In den Alpen</a>
+      <a href="/quiz/143" class="button">In den Alpen 2</a>
+      <a href="/quiz/43" class="button">Kartoffel</a>
+      <a href="/quiz/59" class="button">Bilder</a>
+      <a href="/quiz/70" class="button">Licht</a>
+      <a href="/quiz/71" class="button">Spielen</a>
+      <a href="/quiz/72" class="button">Programmieren</a>
+      <a href="/quiz/73" class="button">Trampoline</a>
+      <a href="/quiz/74" class="button">Benzin</a>
+      <a href="/quiz/64" class="button">Kaffee</a>
+      <a href="/quiz/84" class="button">Bonbons</a>
+      <a href="/quiz/86" class="button">Geld</a>
+      <a href="/quiz/85" class="button">Auf dem Weg</a>
+      <a href="/quiz/98" class="button">Schlafzug</a>
+      <a href="/quiz/101" class="button">Keine Zeit</a>
+      <a href="/quiz/136" class="button">Licht (NEUE)</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Lesen Teil 2</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/4" class="button">Puppenmacher</a>
+      <a href="/quiz/5" class="button">Österreich</a>
+      <a href="/quiz/6" class="button">Parkuhren</a>
+      <a href="/quiz/7" class="button">Traumfrau</a>
+      <a href="/quiz/13" class="button">Kaufentscheidungen</a>
+      <a href="/quiz/15" class="button">Millionäre</a>
+      <a href="/quiz/19" class="button">Gehirn</a>
+      <a href="/quiz/20" class="button">Verpackungen</a>
+      <a href="/quiz/21" class="button">Kreditkarten</a>
+      <a href="/quiz/22" class="button">Krista die Kühe</a>
+      <a href="/quiz/23" class="button">Ernährung</a>
+      <a href="/quiz/24" class="button">Kaffee</a>
+      <a href="/quiz/134" class="button">Kaffee 2</a>
+      <a href="/quiz/29" class="button">Großraumbüros</a>
+      <a href="/quiz/44" class="button">Familie</a>
+      <a href="/quiz/45" class="button">Babys</a>
+      <a href="/quiz/46" class="button">Karneval von Unna</a>
+      <a href="/quiz/47" class="button">Mehrsprachige</a>
+      <a href="/quiz/60" class="button">Gesundes Essen</a>
+      <a href="/quiz/61" class="button">Dienstmädchen</a>
+      <a href="/quiz/75" class="button">Reitergruppe</a>
+      <a href="/quiz/77" class="button">Brigitte Vollmer</a>
+      <a href="/quiz/79" class="button">Nachtzug</a>
+      <a href="/quiz/102" class="button">Die ganze Welt</a>
+      <a href="/quiz/123" class="button">Kellner</a>
+      <a href="/quiz/131" class="button">Weniger Euro</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Lesen Teil 3</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/62" class="button">Fernsehprogramm</a>
+      <a href="/quiz/63" class="button">Sport ist Gesund</a>
+      <a href="/quiz/65" class="button">Kellner</a>
+      <a href="/quiz/66" class="button">Schwägerin</a>
+      <a href="/quiz/145" class="button">Schwägerin(das)</a>
+      <a href="/quiz/67" class="button">Dokumentarfilm</a>
+      <a href="/quiz/68" class="button">Wein und Insekten</a>
+      <a href="/quiz/69" class="button">Grundschule</a>
+      <a href="/quiz/141" class="button">Kein Zeit</a>
+      <a href="/quiz/76" class="button">Kein Zeit 2</a>
+      <a href="/quiz/78" class="button">Sport</a>
+      <a href="/quiz/80" class="button">Gärten</a>
+      <a href="/quiz/81" class="button">Apotheker</a>
+      <a href="/quiz/82" class="button">Urlaub</a>
+      <a href="/quiz/83" class="button">Anwalt</a>
+      <a href="/quiz/87" class="button">Der Hund</a>
+      <a href="/quiz/88" class="button">Musik</a>
+      <a href="/quiz/89" class="button">Haushalt</a>
+      <a href="/quiz/90" class="button">Musikinstrumente</a>
+      <a href="/quiz/108" class="button">Schiffsreise</a>
+      <a href="/quiz/109" class="button">Ausflug</a>
+      <a href="/quiz/110" class="button">Schwägerin Gesund</a>
+      <a href="/quiz/111" class="button">Übersetzerin</a>
+      <a href="/quiz/124" class="button">Tierdokumentationen</a>
+      <a href="/quiz/132" class="button">Schlafzug</a>
+      <a href="/quiz/140" class="button">Bonbons</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Sprachbausteine Teil 1</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/30" class="button">Herr Martini</a>
+      <a href="/quiz/31" class="button">Judith oder Lina</a>
+      <a href="/quiz/32" class="button">Igor</a>
+      <a href="/quiz/33" class="button">Maria</a>
+      <a href="/quiz/34" class="button">Ida</a>
+      <a href="/quiz/35" class="button">Andrea</a>
+      <a href="/quiz/91" class="button">Andrea 2</a>
+      <a href="/quiz/36" class="button">Autorinnen und Autoren</a>
+      <a href="/quiz/37" class="button">Geissler oder Dippold</a>
+      <a href="/quiz/38" class="button">Herr Dr. Dobromil</a>
+      <a href="/quiz/92" class="button">Frau Szabo</a>
+      <a href="/quiz/144" class="button">Frau Szabo 2</a>
+      <a href="/quiz/93" class="button">Corinna</a>
+      <a href="/quiz/94" class="button">Justus oder Juhannas</a>
+      <a href="/quiz/95" class="button">Justus oder Juhannas 2</a>
+      <a href="/quiz/96" class="button">Ferdinand, Phillip, Christopher</a>
+      <a href="/quiz/97" class="button">Liebe Paola</a>
+      <a href="/quiz/100" class="button">Liebe Julian</a>
+      <a href="/quiz/103" class="button">Liebe Lara</a>
+      <a href="/quiz/105" class="button">Lieber David</a>
+      <a href="/quiz/106" class="button">Liebe Maria, Lieber Timur</a>
+      <a href="/quiz/114" class="button">Liebe Vanessa</a>
+      <a href="/quiz/115" class="button">Frau Goronsksa</a>
+      <a href="/quiz/118" class="button">Liebe Karin</a>
+      <a href="/quiz/119" class="button">Liebe Jutta</a>
+      <a href="/quiz/126" class="button">Liebe Meike</a>
+      <a href="/quiz/128" class="button">Liebe Leon</a>
+      <a href="/quiz/130" class="button">Liebe Clara</a>
+      <a href="/quiz/133" class="button">Lieber Thomas</a>
+      <a href="/quiz/135" class="button">Dr. Moosberger</a>
+      <a href="/quiz/137" class="button">Lina & Florian</a>
+      <a href="/quiz/138" class="button">Liebe Agnieszka</a>
+      <a href="/quiz/142" class="button">Jens</a>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h1>Sprachbausteine Teil 2</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/1" class="button">Theater für Kinder und Jugendliche</a>
+      <a href="/quiz/2" class="button">Im Restaurant</a>
+      <a href="/quiz/3" class="button">Das Fahrrad: ernsthafte Konkurrenz fürs Auto?</a>
+      <a href="/quiz/14" class="button">Haustieren</a>
+      <a href="/quiz/48" class="button">Liebesgrüße aus der Kühltruhe</a>
+      <a href="/quiz/49" class="button">Braunbären</a>
+      <a href="/quiz/50" class="button">Ausbildung</a>
+      <a href="/quiz/51" class="button">Skipiste</a>
+      <a href="/quiz/52" class="button">Jugend diskutiert</a>
+      <a href="/quiz/53" class="button">Manipulierte Bilder</a>
+      <a href="/quiz/54" class="button">Haustieren</a>
+      <a href="/quiz/55" class="button">Schwarzarbeit</a>
+      <a href="/quiz/56" class="button">Handschrift</a>
+      <a href="/quiz/57" class="button">Schulweg</a>
+      <a href="/quiz/58" class="button">Höflichkeit</a>
+      <a href="/quiz/99" class="button">Obst und Gemüse</a>
+      <a href="/quiz/104" class="button">TV-Bilder</a>
+      <a href="/quiz/107" class="button">Freund des Menschen</a>
+      <a href="/quiz/112" class="button">BIO</a>
+      <a href="/quiz/113" class="button">Erfolg</a>
+      <a href="/quiz/116" class="button">Deutschland</a>
+      <a href="/quiz/117" class="button">Joggen</a>
+      <a href="/quiz/120" class="button">Maßgeschneidert</a>
+      <a href="/quiz/121" class="button">Der Hund</a>
+      <a href="/quiz/122" class="button">Online—Sprachkurse</a>
+      <a href="/quiz/125" class="button">Fische</a>
+      <a href="/quiz/127" class="button">Man(n) kocht selbst</a>
+      <a href="/quiz/129" class="button">Schönschrift</a>
+      <a href="/quiz/139" class="button">Kaffee und Kuchen</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Hören</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/8" class="button">Teil 1</a>
+      <a href="/quiz/9" class="button">Teil 2</a>
+      <a href="/quiz/10" class="button">Teil 3</a>
+    </div>
+  </div>
+
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+</body>
+</html>
+
+

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prüfung B1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      padding: 40px;
+      margin: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    .header-buttons {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 12px;
+      /* --- THIS IS THE FIX --- */
+      /* Add a z-index to make sure the buttons are on top of other content. */
+      z-index: 10;
+    }
+
+    .nav-button {
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-button:hover {
+      transform: scale(1.05);
+    }
+
+    .home-button {
+      background-color: #007BFF;
+    }
+
+    .home-button:hover {
+      background-color: #0056b3;
+    }
+    
+    .logout-button {
+      background-color: #d9534f;
+    }
+
+    .logout-button:hover {
+      background-color: #c9302c;
+    }
+
+    .container {
+      background: rgb(254, 255, 225);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      padding: 30px 25px;
+      margin-bottom: 40px;
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+      border-top: 6px solid #007BFF;
+    }
+
+    .container:nth-child(2n) {
+      border-top-color: #cc0000;
+    }
+
+    h1 {
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 24px;
+      color: #444;
+    }
+
+    .quiz-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    a.button {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #007BFF;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.2s;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    a.button:hover {
+      background-color: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #warningBox {
+  display: none;
+  position: fixed;
+  top: 20px;                  
+  left: 50%;                  
+  transform: translateX(-50%);
+  background: #f81d1d;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 9999;
+}
+  </style>
+</head>
+<body>
+
+<div class="header-buttons">
+  <a href="/home" class="nav-button home-button">Homepage</a>
+  <a href="/logout" class="nav-button logout-button">Abmelden</a>
+</div>
+
+
+  <div class="container">
+    <h1>Lesen Teil 1</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/204" class="button">PETRA/JENNIFER</a>
+      <a href="/quiz/206" class="button">EVA/IRIS</a>
+      <a href="/quiz/215" class="button">SOPHIE/ANDREAS2</a>
+      <a href="/quiz/219" class="button">NADJA/CLAUDIA</a>
+      <a href="/quiz/221" class="button">NICOLE</a>
+      <a href="/quiz/223" class="button">ANDREAS</a>
+      <a href="/quiz/226" class="button">ANNIKA1</a>
+      <a href="/quiz/227" class="button">ANNIKA2/SONJA<br>
+        CORINA</a>
+      <a href="/quiz/228" class="button">CAROLINA/ALICIA</a>
+      <a href="/quiz/230" class="button">VERA</a>
+      <a href="/quiz/232" class="button">THOMAS</a>
+      <a href="/quiz/234" class="button">TAMARA/JAKOB<br>
+        PAUL</a>
+      <a href="/quiz/235" class="button">JAN</a>
+      <a href="/quiz/237" class="button">VIKTOR</a>
+      <a href="/quiz/240" class="button">ALEX & CORA</a>
+      <a href="/quiz/242" class="button">RITA</a>
+      <a href="/quiz/244" class="button">MIROSLAV</a>
+      <a href="/quiz/246" class="button">KARLA</a>
+      <a href="/quiz/247" class="button">MORITZ</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Lesen Teil 2</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/205" class="button">Petra & ALICIA</a>
+      <a href="/quiz/207" class="button">EVA1</a>
+      <a href="/quiz/208" class="button">IRIS</a>
+      <a href="/quiz/216" class="button">SOPHIE</a>
+      <a href="/quiz/220" class="button">NADJA & CLAUDIA</a>
+      <a href="/quiz/222" class="button">NICOLE</a>
+      <a href="/quiz/224" class="button">ANDREAS</a>
+      <a href="/quiz/225" class="button">ANDREAS2 & CORINA<br>
+        ANNIKA(1&2)</a>
+      <a href="/quiz/229" class="button">CAROLINA/VERA</a>
+      <a href="/quiz/231" class="button">JENNIFER & TAMARA<br>
+        JAKOB/PAUL</a>
+      <a href="/quiz/233" class="button">THOMAS</a>
+      <a href="/quiz/236" class="button">JAN</a>
+      <a href="/quiz/238" class="button">VIKTOR</a>
+      <a href="/quiz/239" class="button">SONJA</a>
+      <a href="/quiz/241" class="button">ALEX & CORA</a>
+      <a href="/quiz/243" class="button">RITA</a>
+      <a href="/quiz/245" class="button">MIROSLAV & KARLA</a>
+      <a href="/quiz/248" class="button">MORITZ</a>
+      <a href="/quiz/249" class="button">MARA</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Lesen Teil 3</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/201" class="button">Petra</a>
+      <a href="/quiz/203" class="button">EVA1</a>
+      <a href="/quiz/202" class="button">IRIS</a>
+      <a href="/quiz/217" class="button">SOPHIE</a>
+      <a href="/quiz/218" class="button">NADJA & CLAUDIA</a>
+      <a href="/quiz/286" class="button">ANDREAS1</a>
+      <a href="/quiz/287" class="button">ANDREAS2</a>
+      <a href="/quiz/288" class="button">CAROLINA</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Sprachbausteine Teil 1</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/209" class="button">PETRA/NADJA2<br>
+        CLAUDIA</a>
+      <a href="/quiz/211" class="button">EVA</a>
+      <a href="/quiz/213" class="button">IRIS</a>
+      <a href="/quiz/250" class="button">SOPHIE</a>
+      <a href="/quiz/251" class="button">NICOLE</a>
+      <a href="/quiz/254" class="button">ANDREAS</a>
+      <a href="/quiz/257" class="button">ANDREAS2/VIKTOR<br>
+        SONJA</a>
+      <a href="/quiz/259" class="button">ANNIKA1</a>
+      <a href="/quiz/261" class="button">ANNIKA2/JAN<br>
+        CORINA</a>
+      <a href="/quiz/262" class="button">CAROLINA/RITA</a>
+      <a href="/quiz/264" class="button">VERA/PAUL</a>
+      <a href="/quiz/266" class="button">THOMAS/ANNA</a>
+      <a href="/quiz/268" class="button">JENNIFER</a>
+      <a href="/quiz/269" class="button">TAMARA/JAKOB</a>
+      <a href="/quiz/273" class="button">ALEX & CORA</a>
+      <a href="/quiz/278" class="button">MIROSLAV</a>
+      <a href="/quiz/280" class="button">KARLA</a>
+      <a href="/quiz/282" class="button">MORITZ</a>
+      <a href="/quiz/283" class="button">ALICIA</a>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h1>Sprachbausteine Teil 2</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/210" class="button">PETRA/ALICIA</a>
+      <a href="/quiz/212" class="button">EVA</a>
+      <a href="/quiz/214" class="button">IRIS</a>
+      <a href="/quiz/253" class="button">SOPHIE</a>
+      <a href="/quiz/252" class="button">NICOLE</a>
+      <a href="/quiz/255" class="button">NADJA/CLAUDIA</a>
+      <a href="/quiz/256" class="button">ANDREAS</a>
+      <a href="/quiz/258" class="button">ANDREAS2/JAN</a>
+      <a href="/quiz/260" class="button">ANNIKA1&2</a>
+      <a href="/quiz/263" class="button">CAROLINA/CORINA</a>
+      <a href="/quiz/265" class="button">VERA</a>
+      <a href="/quiz/267" class="button">THOMAS/ANNA<br>
+        JENNIFER</a>
+      <a href="/quiz/270" class="button">TAMARA/JAKOB<br>
+        SONJA</a>
+      <a href="/quiz/272" class="button">VIKTOR</a>
+      <a href="/quiz/274" class="button">ALEX & CORA</a>
+      <a href="/quiz/276" class="button">PAUL</a>
+      <a href="/quiz/277" class="button">RITA</a>
+      <a href="/quiz/279" class="button">MIROSLAV</a>
+      <a href="/quiz/281" class="button">KARLA/MORITZ</a>
+      <a href="/quiz/284" class="button">JAKOB2</a>
+      
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Hören</h1>
+    <div class="quiz-buttons">
+      <a href="/quiz/271" class="button">Teil 1</a>
+      <a href="/quiz/285" class="button">Teil 2</a>
+      <a href="/quiz/275" class="button">Teil 3</a>
+    </div>
+  </div>
+
+  <script>
+let pingTimeout;
+let logoutTimer;
+let warningTimer;
+let countdownTimer;
+let lastPing = 0;
+
+const INACTIVITY_LIMIT = 15 * 60 * 1000; // 15 minutes
+const WARNING_BEFORE_LOGOUT = 30 * 1000; // 30 seconds
+const warningBox = document.getElementById("warningBox");
+const countdownEl = document.getElementById("countdown");
+
+function sendPing() {
+    const now = Date.now();
+    if (now - lastPing < 10000) return; 
+    lastPing = now;
+    fetch("/ping").catch(() => {});
+}
+
+function resetTimers() {
+    clearTimeout(pingTimeout);
+    clearTimeout(logoutTimer);
+    clearTimeout(warningTimer);
+    clearInterval(countdownTimer);
+
+    warningBox.style.display = "none"; // 🟡 hide warning if active again
+
+    sendPing();
+    pingTimeout = setTimeout(sendPing, 60 * 1000);
+
+    // Show warning 30s before logout
+    warningTimer = setTimeout(() => {
+        let remaining = 30;
+        warningBox.style.display = "block";
+        countdownEl.textContent = remaining;
+
+        countdownTimer = setInterval(() => {
+            remaining--;
+            countdownEl.textContent = remaining;
+            if (remaining <= 0) {
+                clearInterval(countdownTimer);
+            }
+        }, 1000);
+    }, INACTIVITY_LIMIT - WARNING_BEFORE_LOGOUT);
+
+    // Auto logout
+    logoutTimer = setTimeout(() => {
+        fetch("/logout", { method: "POST" })
+          .then(() => window.location.href = "/");
+    }, INACTIVITY_LIMIT);
+}
+
+// Events
+["mousemove", "keydown", "scroll", "click", "touchstart"].forEach(evt => {
+    document.addEventListener(evt, resetTimers);
+});
+
+window.addEventListener("pageshow", sendPing);
+window.addEventListener("beforeunload", sendPing);
+
+resetTimers();
+</script>
+
+</body>
+</html>
